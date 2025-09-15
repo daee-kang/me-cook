@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "pnpm -r --parallel dev",
-    "build": "pnpm -r build",
+    "web:dev": "cd apps/web && pnpm run start",
+    "api:dev": "cd apps/api && pnpm run dev",
     "test": "pnpm -r test",
-    "gen:types": "supabase gen types typescript --linked > packages/db-types/src/generated.ts && echo '✅ generated db types into packages/db-types/src/generated.ts'"
+    "types:gen": "supabase gen types typescript --linked > packages/db-types/src/generated.ts && echo '✅ generated db types into packages/db-types/src/generated.ts'"
   },
   "devDependencies": {
     "@types/node": "^24.4.0",
