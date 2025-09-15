@@ -14,6 +14,10 @@
 
     // Type Checking & Safety
     "strict": true,
-    "types": ["vite/client", "@testing-library/jest-dom"]
+    "types": ["vite/client", "@testing-library/jest-dom"],
+    "paths": {
+      "@me-cook/api-contracts": ["../../packages/api-contracts/src"],
+      "@me-cook/db-types": ["../../packages/db-types/src"]
+    }
   }
 }

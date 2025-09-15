@@ -1,0 +1,6 @@
+project_id = "local-dev"
+
+[functions]
+ignore = ["**/node_modules/**", "**/.git/**", "**/.DS_Store"]
+import_map = "../deno.json"
+

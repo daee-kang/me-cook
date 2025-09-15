@@ -4,6 +4,7 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
+import path from 'node:path';
 
 export default defineConfig({
   plugins: [devtools(), solidPlugin()],
@@ -23,5 +24,9 @@ export default defineConfig({
   },
   resolve: {
     conditions: ['development', 'browser'],
+    alias: {
+      '@me-cook/api-contracts': path.resolve(__dirname, '../../packages/api-contracts/src'),
+      '@me-cook/db-types': path.resolve(__dirname, '../../packages/db-types/src'),
+    },
   },
 });

@@ -1,0 +1,24 @@
+{
+  "name": "@me-cook/api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/server.ts --format esm,cjs --splitting --clean",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.6",
+    "hono": "^4.6.9",
+    "zod": "^3.23.8",
+    "@me-cook/api-contracts": "workspace:*",
+    "@me-cook/db-types": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
+
