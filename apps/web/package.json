@@ -26,9 +26,11 @@
     "vitest": "^3.0.0"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.57.4",
     "@me-cook/api-contracts": "workspace:*",
     "@me-cook/db-types": "workspace:*",
-    "solid-js": "^1.9.5"
+    "@supabase/supabase-js": "^2.57.4",
+    "@tailwindcss/vite": "^4.1.13",
+    "solid-js": "^1.9.5",
+    "tailwindcss": "^4.1.13"
   }
 }
