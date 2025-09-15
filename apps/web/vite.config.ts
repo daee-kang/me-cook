@@ -1,11 +1,11 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
-import devtools from "solid-devtools/vite";
-import path from "node:path";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'vite';
+import solidPlugin from 'vite-plugin-solid';
+import devtools from 'solid-devtools/vite';
+import path from 'node:path';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [devtools(), , tailwindcss(), solidPlugin()],
@@ -13,26 +13,26 @@ export default defineConfig({
     port: 3000,
   },
   test: {
-    environment: "jsdom",
+    environment: 'jsdom',
     globals: false,
-    setupFiles: ["node_modules/@testing-library/jest-dom/vitest"],
+    setupFiles: ['node_modules/@testing-library/jest-dom/vitest'],
     // if you have few tests, try commenting this
     // out to improve performance:
     isolate: false,
   },
   build: {
-    target: "esnext",
+    target: 'esnext',
   },
   resolve: {
-    conditions: ["development", "browser"],
+    conditions: ['development', 'browser'],
     alias: {
-      "@me-cook/api-contracts": path.resolve(
+      '@me-cook/api-contracts': path.resolve(
         __dirname,
-        "../../packages/api-contracts/src"
+        '../../packages/api-contracts/src',
       ),
-      "@me-cook/db-types": path.resolve(
+      '@me-cook/db-types': path.resolve(
         __dirname,
-        "../../packages/db-types/src"
+        '../../packages/db-types/src',
       ),
     },
   },
